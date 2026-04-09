@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расходы</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="d-flex flex-column flex-shrink-0 min-vh-100 py-5 bg-light" style="width: 219px;">
+            <a href="/" class="d-flex justify-content-center w-100 mx-auto mb-5">
+                <img src="../images/logo-mini.png" alt="Логотип">
+            </a>
+            <ul class="nav nav-pills flex-column mb-auto px-3 pt-5 border-top border-secondary-subtle">
+                <li class="nav-item">
+                    <a href="/frontend/templates/index.html" class="nav-link text-primary-emphasis py-2 pe-0"
+                        aria-current="page">
+                        <i class="bi bi-house"></i>
+                        Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/frontend/templates/income-expenses.html" class="nav-link text-primary-emphasis py-2 pe-0">
+                        <i class="bi bi-cash-coin"></i>
+                        Доходы & Расходы
+                    </a>
+                </li>
+                <li class="nav-item w-100">
+                    <div class="accordion-item-custom" id="categoriesGroup">
+                        <button class="btn btn-toggle d-flex align-items-center rounded w-100 border-0 py-2 ps-3"
+                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            <span>Категории</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="/frontend/templates/incomes.html"
+                                        class="submenu-link d-block py-1 ">Доходы</a></li>
+                                <li><a href="/frontend/templates/expenses.html"
+                                        class="submenu-link d-block py-1 active">Расходы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p class="text-primary-emphasis ps-3">Баланс:<span class="ms-2 text-primary">500$</span></p>
+            <div class="d-flex align-items-center gap-3 pt-4 ps-4 border-top border-secondary-subtle">
+                <div>
+                    <img src="../images/icon.png" alt="Иконка">
+                </div>
+                <div class="text-primary-emphasis fs-6">
+                    Roman Chernov
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <h1 class="text-primary-emphasis mt-100px lh-1 mb-5">Расходы</h1>
+            <div class="d-flex gap-3 flex-wrap">
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Еда</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Жильё</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Здоровье</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Кафе</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Авто</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Одежда</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Развлечения</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Счета</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income">
+                    <h2 class="text-primary-emphasis mb-3">Спорт</h2>
+                    <div class="d-flex gap-2">
+                        <a href="/frontend/templates/edit-expense.html"
+                            class="btn btn-primary px-3 py-2">Редактировать</a>
+                        <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+                    </div>
+                </div>
+                <div class="py-4 ps-4 border rounded income d-flex justify-content-center align-items-center">
+                    <a href="/frontend/templates/create-expense.html">
+                        <i class="bi bi-plus-lg text-secondary"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="popup-overlay"></div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p class="fs-5 text-primary-emphasis fw-medium text-center mb-3">Вы действительно хотите удалить категорию?</p>
+            <div class="popup-buttons">
+                <button id="confirmDelete" class="btn btn-success px-3">Да, удалить</button>
+                <button id="cancelDelete" class="btn btn-danger px-3">Не удалять</button>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/popup-expense.js"></script>
+</body>
+
+
+
+
+</html>
