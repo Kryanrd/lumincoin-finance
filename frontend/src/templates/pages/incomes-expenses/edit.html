@@ -1,0 +1,20 @@
+<h1 class="text-primary-emphasis mt-100px lh-1 mb-5">Редактирование дохода/расхода</h1>
+<div class="custom-form d-flex flex-column gap-3 mb-3">
+    <select class="form-select text-secondary ps-3 text-black" disabled>
+        <option class="text-secondary">Тип...</option>
+        <option value="income" class="text-black" selected>Доход</option>
+        <option value="expense" class="text-black">Расход</option>
+    </select>
+    <select class="form-select ps-3 text-black">
+        <option class="text-secondary">Категория...</option>
+        <option selected value="salary" class="text-black">Зарплата</option>
+        <option value="housing" class="text-black">Жилье</option>
+    </select>
+    <input type="number" placeholder="500$" class="form-control ps-3 text-black" value="500$">
+    <input type="date" placeholder="11.09.2022" class="form-control ps-3 text-black" value="11.09.2022">
+    <input type="text" placeholder="Комментарий..." class="form-control ps-3 text-black">
+    <div class="d-flex gap-2">
+        <button class="btn btn-success px-3 py-2 w-25">Создать</button>
+        <button class="btn btn-danger px-3 py-2 w-25">Отмена</button>
+    </div>
+</div>
