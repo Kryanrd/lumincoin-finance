@@ -1,71 +1,16 @@
 <h1 class="text-primary-emphasis mt-100px lh-1 mb-5">Расходы</h1>
-<div class="d-flex gap-3 flex-wrap">
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Еда</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
+<div class="d-flex gap-3 flex-wrap pb-3" id="expenses-records">
+
+</div>
+
+<div id="overlay" class="popup-overlay"></div>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p class="text-primary-emphasis text-center fs-5 fw-medium">Вы действительно хотите удалить категорию?</p>
+        <div class="popup-buttons">
+            <button id="confirmDelete" class="btn btn-success">Да, удалить</button>
+            <button id="cancelDelete" class="btn btn-danger">Не удалять</button>
         </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Жильё</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Здоровье</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Кафе</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Авто</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Одежда</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Развлечения</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Счета</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/editl" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income">
-        <h2 class="text-primary-emphasis mb-3">Спорт</h2>
-        <div class="d-flex gap-2">
-            <a href="/expenses/edit" class="btn btn-primary px-3 py-2">Редактировать</a>
-            <a href="#" class="btn btn-danger px-3 py-2">Удалить</a>
-        </div>
-    </div>
-    <div class="py-4 ps-4 border rounded income d-flex justify-content-center align-items-center">
-        <a href="/expenses/create">
-            <i class="bi bi-plus-lg text-secondary"></i>
-        </a>
     </div>
 </div>

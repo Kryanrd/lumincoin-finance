@@ -9,12 +9,16 @@ export class Login {
             return this.openNewRoute('/');
         }
 
+        this.findElements();
+
+        document.getElementById('process-button').addEventListener('click', this.login.bind(this));
+    }
+
+    findElements() {
         this.emailElement = document.getElementById('email');
         this.passwordElement = document.getElementById('password');
         this.rememberMeElement = document.getElementById('remember-me');
         this.commonErrorElement = document.getElementById('common-error');
-
-        document.getElementById('process-button').addEventListener('click', this.login.bind(this));
     }
 
     valifateForm() {

@@ -41,8 +41,7 @@ module.exports = {
                 { from: "./node_modules/bootstrap-icons/font/bootstrap-icons.min.css", to: "css" },
                 { from: "./node_modules/bootstrap-icons/font/fonts", to: "css/fonts" },
                 { from: "./node_modules/bootstrap/dist/js/bootstrap.min.js", to: "js" },
-                { from: "./node_modules/chart.js/dist/chart.umd.js", to: "js" },
-                { from: "./src/scripts/main-chart.js", to: "js" },
+                { from: "./node_modules/chart.js/dist/chart.umd.js", to: "js" }
             ],
         }),
     ]

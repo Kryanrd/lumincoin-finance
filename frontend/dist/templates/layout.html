@@ -5,13 +5,13 @@
         </a>
         <ul class="nav nav-pills flex-column mb-auto px-3 pt-5 border-top border-secondary-subtle">
             <li class="nav-item">
-                <a href="/" class="nav-link py-2 pe-0 active" aria-current="page">
+                <a href="/" class="nav-link py-2 pe-0" aria-current="page">
                     <i class="bi bi-house"></i>
                     Главная
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/incomes-expenses" class="nav-link text-primary-emphasis py-2 pe-0">
+                <a href="/incomes-expenses" class="nav-link py-2 pe-0">
                     <i class="bi bi-cash-coin"></i>
                     Доходы & Расходы
                 </a>
@@ -33,17 +33,30 @@
                 </div>
             </li>
         </ul>
-        <p class="text-primary-emphasis ps-3">Баланс:<span class="ms-2 text-primary">500$</span></p>
-        <div class="d-flex align-items-center gap-3 pt-4 ps-4 border-top border-secondary-subtle">
+        <p class="text-primary-emphasis ps-3">Баланс:<span class="ms-2 text-primary" id="balance">500$</span></p>
+        <div class="d-flex align-items-center gap-3 pt-4 ps-4 border-top border-secondary-subtle position-relative">
             <div>
-                <img src="../images/icon.png" alt="Иконка">
+                <img src="../images/icon.png" alt="Иконка" id="logout-btn" role="button">
             </div>
-            <div class="text-primary-emphasis fs-6">
+            <div class="text-primary-emphasis fs-6" id="user">
                 Roman Chernov
             </div>
         </div>
     </div>
     <div class="main-container" id="content-layout">
 
+    </div>
+
+    <div id="overlay" class="popup-overlay"></div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p class="fs-5 text-primary-emphasis fw-medium text-center mb-3">Вы хотите выйти из аккаунта?
+            </p>
+            <div class="popup-buttons">
+                <a href="/logout" class="btn btn-success px-3">Выйти</a>
+                <button class="btn btn-danger px-3" id="cancelLogout">Отмена</button>
+            </div>
+        </div>
     </div>
 </div>

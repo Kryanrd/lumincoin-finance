@@ -9,15 +9,20 @@ export class SignUp {
             return this.openNewRoute('/');
         }
 
+        this.findElements();
+
+        document.getElementById('process-button').addEventListener('click', this.signUp.bind(this));
+    }
+
+    findElements() {
         this.nameElement = document.getElementById('name');
         this.lastNameElement = document.getElementById('last-name');
         this.emailElement = document.getElementById('email');
         this.passwordElement = document.getElementById('password');
         this.passwordRepeatElement = document.getElementById('password-repeat');
         this.commonErrorElement = document.getElementById('common-error');
-
-        document.getElementById('process-button').addEventListener('click', this.signUp.bind(this));
     }
+
 
     valifateForm() {
         let isValid = true;
