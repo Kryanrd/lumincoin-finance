@@ -1,4 +1,5 @@
 import { HttpUtils } from "../../utils/http-utils";
+import { LayoutUtils } from "../../utils/layout-utils";
 
 export class IncomesExpenses {
     constructor(openNewRoute) {
@@ -116,6 +117,9 @@ export class IncomesExpenses {
         }
 
         this.hidePopup();
+
+        await LayoutUtils.updateBalance(this.openNewRoute);
+
         if (this.currentPeriod === 'interval') {
             this.loadOperations('interval', this.dateFromInput.value, this.dateToInput.value);
         } else {
