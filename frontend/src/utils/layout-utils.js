@@ -11,20 +11,23 @@ export class LayoutUtils {
             link.classList.add('text-primary-emphasis');
         });
 
+        const collapseElement = document.querySelector('#home-collapse');
 
         let activeLink = Array.from(navLinks).find(link => link.getAttribute('href') === currentPath);
         if (activeLink) {
             activeLink.classList.add('active');
             activeLink.classList.remove('text-primary-emphasis');
-        } else {
-            const submenuLinks = document.querySelectorAll('.submenu-link');
-            submenuLinks.forEach(link => link.classList.remove('active'));
-            const activeSub = Array.from(submenuLinks).find(link => link.getAttribute('href') === currentPath);
-            if (activeSub) {
-                activeSub.classList.add('active');
-                const parentBtn = document.querySelector('#categoriesGroup .btn-toggle');
-                if (parentBtn) parentBtn.classList.add('active');
-            }
+            return;
+        }
+
+        const submenuLinks = document.querySelectorAll('.submenu-link');
+        submenuLinks.forEach(link => link.classList.remove('active'));
+        const activeSub = Array.from(submenuLinks).find(link => link.getAttribute('href') === currentPath);
+        if (activeSub) {
+            collapseElement.classList.add('show');
+            activeSub.classList.add('active');
+            const parentBtn = document.querySelector('#categoriesGroup .btn-toggle');
+            if (parentBtn) parentBtn.classList.add('active');
         }
     }
 

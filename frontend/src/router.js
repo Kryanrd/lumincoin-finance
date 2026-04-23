@@ -26,7 +26,7 @@ export class Router {
                 filePathTemplate: '/templates/main-page.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new MainPage();
+                    new MainPage(this.openNewRoute.bind(this));
                 },
                 scripts: ['chart.umd.js']
             },
@@ -51,7 +51,7 @@ export class Router {
             {
                 route: '/logout',
                 load: () => {
-                    new Logout(this.openNewRoute.bind(this))
+                    new Logout(this.openNewRoute.bind(this));
                 }
             },
             {
@@ -60,7 +60,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes-expenses/incomes-expenses.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomesExpenses();
+                    new IncomesExpenses(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -69,7 +69,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes-expenses/create.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomesExpensesCreate();
+                    new IncomesExpensesCreate(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -78,7 +78,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes-expenses/edit.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomesExpensesEdit();
+                    new IncomesExpensesEdit(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -87,7 +87,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes/incomes.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new Incomes();
+                    new Incomes(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -96,7 +96,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes/create.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomesCreate();
+                    new IncomesCreate(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -105,7 +105,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes/edit.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeEdit();
+                    new IncomeEdit(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -114,7 +114,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/expenses/expenses.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new Expenses();
+                    new Expenses(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -123,18 +123,18 @@ export class Router {
                 filePathTemplate: '/templates/pages/expenses/edit.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new ExpensesEdit();
+                    new ExpensesEdit(this.openNewRoute.bind(this));
                 },
             },
-             {
+            {
                 route: '/expenses/create',
                 title: 'Создание категории расходов',
                 filePathTemplate: '/templates/pages/expenses/create.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new ExpensesCreate();
+                    new ExpensesCreate(this.openNewRoute.bind(this));
                 },
-            },
+            }
         ]
     }
 
@@ -201,7 +201,6 @@ export class Router {
                 for (const script of newRoute.scripts) {
                     await FileUtils.loadPageScript('/js/' + script);
                 }
-
             }
 
             if (newRoute.title) {
@@ -225,7 +224,7 @@ export class Router {
             }
 
             if (newRoute.useLayout) {
-                await LayoutUtils.initLayout(newRoute.route, this.openNewRoute.bind(this));
+               await LayoutUtils.initLayout(newRoute.route, this.openNewRoute.bind(this));
             }
 
         } else {

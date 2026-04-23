@@ -6,10 +6,10 @@
     transform: rotate(0deg);
 }
 
-.btn-toggle i.bi-chevron-right {
+.btn-toggle.active i.bi-chevron-right {
     transform: rotate(90deg);
-    transition: transform 0.2s ease;
 }
+
 
 .btn-toggle.active {
     background-color: #0d6efd !important;
